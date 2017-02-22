@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Index page</title>
+    </h:head>
+    <h:body>
+        Register page
+        <br/>
+        <h:form>
+        <h:outputLabel value="Group 2 Version 0.3"/>
+        <br/>
+        READ DEMO: read profile on user table position 1 : <br/>
+        <h:outputLabel value ="#{showUserInfo.username}"/>
+        
+        <br/>
+        Write Demo: add a new user in the database <br/>
+        User Name<h:inputText value="#{showUserInfo.user.username}">
+                
+                </h:inputText>
+        <br/>
+        User Password<h:inputText value="#{showUserInfo.user.password}">
+                       
+                    </h:inputText><br/>
+        User type<h:inputText value="#{showUserInfo.user.usertype}"/><br/>
+        <h:commandButton action="#{showUserInfo.createUser()}" value="Add new user"/>
+        </h:form>
+       
+    </h:body>
+</html>
+

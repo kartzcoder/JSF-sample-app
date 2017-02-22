@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Group2 Shop</title>
+    </h:head>
+    <h:body>
+        <h1>Welcome To Group 2 on-line Shop!</h1>
+        <br/>
+        <h2>Please Login To Your Account</h2><br/><br/>
+        <h:form>
+            
+            Username: <h:inputText   value="#{startBean.username}">
+                        
+                      </h:inputText>
+            <br/><br/>
+            Password: <h:inputSecret value="#{startBean.password}">
+                             
+                      </h:inputSecret> <br/><br/>
+            <h:commandButton value="Submit" action="#{startBean.evaluate()}"/>
+  
+
+        </h:form>
+    </h:body>
+</html>
+

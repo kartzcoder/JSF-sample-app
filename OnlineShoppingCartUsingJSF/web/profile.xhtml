@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Profile Page: This page displays users profiles.
+
+        <h:dataTable value='#{userBeans.usersType}' var='order'
+                     border='1' width='300' cellpadding="5">
+            <h:column>
+                <f:facet name='header'>Name</f:facet>
+                    #{order.username}
+            </h:column>
+            <h:column>
+                <f:facet name='header'> Profile</f:facet>
+                    #{order.profile}
+            </h:column>
+
+
+        </h:dataTable>
+        <br/>
+        <br/>
+        <h:form>
+            <h:inputText value="#{userBeans.name}"/>
+            <h:commandButton value="search" action="profile"/>
+        </h:form>
+        <h:dataTable value='#{userBeans.usersName}' var='order'
+                     border='1' width='300' cellpadding="5">
+            <h:column>
+                <f:facet name='header'>Name</f:facet>
+                    #{order.username}
+            </h:column>
+            <h:column>
+                <f:facet name='header'> Profile</f:facet>
+                    #{order.profile}
+            </h:column>
+
+
+        </h:dataTable>
+        <br/>
+        <br/>
+        <h:form>
+            <h:commandButton value="edit my user" action="editCustomer"/>
+            <br/><h:commandButton action="#{startBean.logOut()}" value="Back to Start"/>
+        </h:form>
+    </h:body>
+</html>
+
