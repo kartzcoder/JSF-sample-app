@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Edit Customer</title>
+        #{administratorBean.updateProduct(administratorBean.lookUpAction())}
+    </h:head>
+    <h:body>
+         <h:form>
+             <h:panelGrid columns="2">
+                 Product Id <h:inputText value="#{administratorBean.group2products.productID}"/>
+                 Product Name <h:inputText value="#{administratorBean.group2products.productname}"/>
+                 Quantity <h:inputText value="#{administratorBean.group2products.quantity}"/>
+                 
+                 <br/> <h:commandButton action="#{administratorBean.update()}"
+                                        value ="Update product"/>
+                 <br/><h:commandButton action="index" value="Back to Start"/>
+             </h:panelGrid>
+         </h:form>
+    </h:body>
+</html>
+
